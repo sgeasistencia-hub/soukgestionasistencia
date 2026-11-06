@@ -1,0 +1,1245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #dcdcdc;
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+        ),
+        url("fondopagina.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+    border-radius: 0;
+}
+
+.panel {
+    background-color: #f5f5f5;
+    width: 92%;
+    max-width: 1400px;
+    margin: 40px auto 30px;
+    padding: 35px;
+    border-radius: 40px;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.burbuja {
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.55),
+            rgba(255, 255, 255, 0.55)
+        ),
+        url("imagen para el principio de la pag.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    max-width: none;
+    padding: 50px 60px;
+    margin: 0;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+}
+
+.burbuja h1 {
+    color: #082478;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.burbuja h3 {
+    color: #000000;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.burbuja p {
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    color: #ffffff;
+    background-color: #01155a;
+    border: none;
+    position: absolute;
+    left: 20px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #020c2b;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sidebar a:hover {
+    background-color: #798ecf;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 30px;
+}
+
+header {
+    background-color: #01155a;
+    color: rgb(255, 255, 255);
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    display: block;
+}
+
+#quienes,
+#hacemos,
+#objetivo,
+#necesidad {
+    display: block;
+    padding: 40px;
+    margin: 30px auto;
+    width: 92%;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(8, 36, 120, 0.15);
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    line-height: 1.7;
+    animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.imagen-seccion {
+    display: block !important;
+    width: 50% !important;
+    max-width: 800px !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+.imagen-seccion:hover {
+    transform: scale(1.03);
+}
+
+.presentacion > h2 {
+    text-align: center;
+    width: 100%;
+    margin: 40px auto 30px;
+    font-size: 36px;
+    color: #082478;
+}
+
+.nombres {
+    width: 100%;
+    margin: 50px auto 70px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #082478;
+    line-height: 1.8;
+}
+
+.integrantes {
+    display: none;
+}
+
+#quienes p {
+    text-align: center;
+}
+
+#quienes p {
+    max-width: 1100px;
+    margin: 25px auto;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* =========================================
+   LISTA DE OBJETIVOS
+========================================= */
+
+#quienes .lista {
+    width: 50%;
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+#quienes .lista p {
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+    padding: 12px 5px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* =========================================
+   ¿QUIÉNES SOMOS?
+========================================= */
+
+#quienes.seccion-quienes {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(8, 36, 120, 0.15);
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+/* ENCABEZADO AZUL */
+
+.quienes-header {
+    background: #94b7d1;
+    color: white;
+    border-radius: 20px;
+    padding: 25px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quienes-header h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* CONTENIDO */
+
+.quienes-contenido {
+    width: 100%;
+    padding: 0;
+    background: transparent;
+}
+
+/* IMAGEN */
+
+.imagen-escuela {
+    display: block !important;
+    width: 50% !important;
+    max-width: 500px !important;
+    height: auto !important;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+/* NOMBRE DE LA ESCUELA */
+
+.quienes-contenido h3 {
+    text-align: center;
+    margin: 10px 0 20px;
+    color: #082478;
+    font-size: 23px;
+}
+
+/* TEXTO */
+
+.quienes-contenido > p {
+    max-width: 100%;
+    margin: 20px auto;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* =========================================
+   OBJETIVOS
+========================================= */
+
+.objetivos-quienes {
+    width: 100%;
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 0;
+}
+
+.objetivo-quienes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 5px;
+    margin: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.objetivo-quienes span {
+    color: #5592b7;
+    font-size: 20px;
+    font-weight: bold;
+    width: 25px;
+    min-width: 25px;
+}
+
+.objetivo-quienes p {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.3;
+    text-align: left;
+}
+
+/* =========================================
+   ADAPTACIÓN PARA CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .objetivos-quienes {
+        width: 100%;
+        margin: 8px auto;
+    }
+
+    .objetivo-quienes {
+        gap: 7px;
+        padding: 7px 2px;
+    }
+
+    .objetivo-quienes span {
+        width: 23px;
+        min-width: 23px;
+        font-size: 18px;
+    }
+
+    .objetivo-quienes p {
+        font-size: 15px;
+        line-height: 1.3;
+    }
+}
+
+.necesidad-header {
+    width: 92%;
+    background-color: #6da5cd;
+    border-radius: 20px;
+    padding: 16px 14px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quienes-header h2,
+.hacemos-header h2,
+.objetivo-header h2,
+.necesidad-header h2 {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* =========================================
+   NUEVO DISEÑO - OBJETIVO
+========================================= */
+
+.objetivo-principal {
+    width: 95%;
+    margin: 25px auto 35px;
+    display: flex;
+    align-items: center;
+    background: #f5f9fd;
+    border: 1px solid #d5e5f2;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/* IMAGEN */
+
+.objetivo-principal img {
+    width: 42%;
+    height: 250px;
+    object-fit: cover;
+    margin: 0;
+}
+
+/* TEXTO PRINCIPAL */
+
+.objetivo-texto {
+    width: 58%;
+    padding: 35px;
+}
+
+.objetivo-texto h3 {
+    color: #082478;
+    font-size: 27px;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0;
+}
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.objetivos-grid {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.tarjeta-objetivo {
+    background: white;
+    border: 1px solid #d5e5f2;
+    border-radius: 20px;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-objetivo:hover {
+    transform: translateY(-5px);
+}
+
+/* ICONOS */
+
+.icono-objetivo {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dcecf8;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #082478;
+}
+
+/* NUMERACIÓN */
+
+.tarjeta-objetivo > span {
+    display: inline-block;
+    background: #6da5cd;
+    color: white;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* TÍTULO */
+
+.tarjeta-objetivo h3 {
+    color: #082478;
+    font-size: 18px;
+    margin: 5px 0 15px;
+    line-height: 1.3;
+}
+
+/* TEXTO */
+
+.tarjeta-objetivo p {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 900px) {
+
+    .objetivos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .objetivo-principal {
+        flex-direction: column;
+    }
+
+    .objetivo-principal img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .objetivo-texto {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .objetivo-texto h3 {
+        text-align: center;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .objetivos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================
+   ¿QUÉ HACEMOS?
+===================================== */
+
+.hacemos-principal {
+    width: 95%;
+    margin: 25px auto 35px;
+    display: flex;
+    align-items: stretch;
+    background: #f5f9fd;
+    border: 1px solid #d5e5f2;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/* IMAGEN */
+
+.hacemos-imagen {
+    width: 50%;
+}
+
+.hacemos-imagen img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXTO */
+
+.hacemos-texto {
+    width: 50%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hacemos-texto h3 {
+    color: #082478;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.hacemos-texto p {
+    color: #444;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* TARJETAS */
+
+.hacemos-tarjetas {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.tarjeta-hacemos {
+    background: white;
+    border: 1px solid #d5e5f2;
+    border-radius: 20px;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-hacemos:hover {
+    transform: translateY(-5px);
+}
+
+.icono-hacemos {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dcecf8;
+    border-radius: 50%;
+    color: #082478;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.tarjeta-hacemos h3 {
+    color: #082478;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.tarjeta-hacemos p {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* =====================================
+   CELULAR
+===================================== */
+
+@media (max-width: 900px) {
+
+    .hacemos-principal {
+        flex-direction: column;
+    }
+
+    .hacemos-imagen,
+    .hacemos-texto {
+        width: 100%;
+    }
+
+    .hacemos-imagen img {
+        height: 250px;
+        min-height: 0;
+    }
+
+    .hacemos-texto {
+        padding: 25px;
+    }
+
+    .hacemos-texto h3,
+    .hacemos-texto p {
+        text-align: center;
+    }
+
+    .hacemos-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hacemos-tarjetas {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================
+   NECESIDAD
+===================================== */
+
+.necesidad-principal {
+    width: 95%;
+    margin: 25px auto 30px;
+    display: flex;
+    align-items: center;
+    background: #f5f9fd;
+    border: 1px solid #d5e5f2;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/* TEXTO PRINCIPAL */
+
+.necesidad-texto {
+    width: 75%;
+    padding: 35px;
+}
+
+.necesidad-texto h3 {
+    color: #082478;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.necesidad-texto p {
+    color: #444;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* ICONOS */
+
+.necesidad-icono {
+    width: 25%;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: #dcecf8;
+}
+
+.necesidad-icono div {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    font-size: 35px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.necesidad-icono span {
+    color: #082478;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* FRASE */
+
+.necesidad-frase {
+    width: 95%;
+    margin: 0 auto 35px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 30px;
+    background: #e5f2fb;
+    border-left: 6px solid #6da5cd;
+    border-radius: 18px;
+}
+
+.necesidad-frase > span {
+    font-size: 40px;
+}
+
+.necesidad-frase h3 {
+    color: #082478;
+    margin-bottom: 5px;
+    font-size: 21px;
+}
+
+.necesidad-frase p {
+    color: #444;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* =====================================
+   CONCLUSIÓN
+===================================== */
+
+.conclusion {
+    width: 95%;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border: 1px solid #d5e5f2;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+}
+
+.conclusion-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #dcecf8;
+}
+
+.conclusion-titulo span {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6da5cd;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.conclusion-titulo h3 {
+    color: #082478;
+    font-size: 27px;
+    margin: 0;
+}
+
+.conclusion p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* =====================================
+   CELULAR
+===================================== */
+
+@media (max-width: 800px) {
+
+    .necesidad-principal {
+        flex-direction: column;
+    }
+
+    .necesidad-texto {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .necesidad-icono {
+        width: 100%;
+        min-height: 150px;
+    }
+
+    .necesidad-frase {
+        align-items: flex-start;
+    }
+
+    .conclusion {
+        padding: 25px;
+    }
+}
+
+/* =====================================
+   ¿QUIÉNES SOMOS?
+===================================== */
+
+.quienes-principal {
+    width: 95%;
+    margin: 25px auto 35px;
+    display: flex;
+    align-items: stretch;
+    background: #f5f9fd;
+    border: 1px solid #d5e5f2;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/* IMAGEN */
+
+.quienes-imagen {
+    width: 42%;
+}
+
+.quienes-imagen img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXTO */
+
+.quienes-texto {
+    width: 58%;
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quienes-texto h3 {
+    color: #082478;
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+.quienes-texto p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.quienes-texto strong {
+    color: #082478;
+}
+
+/* =====================================
+   OBJETIVOS
+===================================== */
+
+.quienes-objetivos {
+    width: 95%;
+    margin: 0 auto;
+    padding: 25px;
+    background: #eaf4fb;
+    border-radius: 22px;
+    border: 1px solid #d5e5f2;
+}
+
+.quienes-objetivos-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.quienes-objetivos-titulo span {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6da5cd;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.quienes-objetivos-titulo h3 {
+    margin: 0;
+    color: #082478;
+    font-size: 22px;
+}
+
+/* TARJETAS */
+
+.objetivos-quienes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.objetivo-quienes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    background: white;
+    border: 1px solid #d5e5f2;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.objetivo-quienes span {
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dcecf8;
+    color: #082478;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.objetivo-quienes p {
+    margin: 0;
+    color: #444;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* =====================================
+   CELULAR / PANTALLAS CHICAS
+===================================== */
+
+@media (max-width: 800px) {
+
+    .quienes-principal {
+        flex-direction: column;
+    }
+
+    .quienes-imagen,
+    .quienes-texto {
+        width: 100%;
+    }
+
+    .quienes-imagen img {
+        height: 230px;
+        min-height: 0;
+    }
+
+    .quienes-texto {
+        padding: 25px;
+    }
+
+    .quienes-texto h3,
+    .quienes-texto p {
+        text-align: center;
+    }
+
+    .objetivos-quienes {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================
+   CONTACTO Y REDES SOCIALES - SOUK
+===================================== */
+
+.souk-contacto {
+    background: linear-gradient(
+        135deg,
+        #0d397c,
+        #124da6,
+        #2563c9
+    );
+
+    color: #ffffff;
+    padding: 55px 25px 25px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contacto-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.souk-contacto h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.souk-contacto > .contacto-contenido > p {
+    font-size: 15px;
+    color: #e3edff;
+    margin-bottom: 35px;
+}
+
+/* =====================================
+   TARJETAS DE REDES
+===================================== */
+
+.contacto-redes {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+
+    justify-content: center;
+    justify-items: center;
+
+    gap: 18px 30px;
+
+    margin: 0 auto 45px;
+
+    background: linear-gradient(
+        135deg,
+        #dcecf8,
+        #a9cce8,
+        #dcecf8
+    );
+
+    padding: 35px 25px;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.red-contacto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: #ffffff;
+    color: #263449;
+
+    padding: 20px;
+    border-radius: 16px;
+
+    width: 250px;
+    max-width: 250px;
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+
+    transition: all 0.3s ease;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.red-contacto:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+    background: #f3f7ff;
+    color: #124da6;
+}
+
+/* =====================================
+   IMÁGENES ORIGINALES DE REDES SOCIALES
+===================================== */
+
+.icono-red {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+
+    object-fit: contain;
+
+    display: block;
+    margin: 0;
+
+    flex-shrink: 0;
+}
+
+/* TEXTOS */
+
+.red-contacto strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #18345c;
+}
+
+.red-contacto small {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 5px;
+    overflow-wrap: anywhere;
+}
+
+/* PIE DE CONTACTO */
+
+.contacto-footer {
+    border-top: 1px solid rgba(255,255,255,0.25);
+    padding-top: 25px;
+    line-height: 1.7;
+}
+
+.contacto-footer h3 {
+    font-size: 21px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.contacto-footer p {
+    font-size: 14px;
+    color: #e3edff;
+    margin: 4px 0;
+}
+
+.contacto-footer span {
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #d4e3ff;
+}
+
+/* =====================================
+   ADAPTACIÓN A CELULARES
+===================================== */
+
+@media (max-width: 600px) {
+
+    .souk-contacto {
+        padding: 40px 18px 22px;
+    }
+
+    .souk-contacto h2 {
+        font-size: 24px;
+    }
+
+    .contacto-redes {
+        grid-template-columns: 1fr;
+        padding: 25px 15px;
+        gap: 15px;
+    }
+
+    .red-contacto {
+        width: 100%;
+        max-width: 300px;
+    }
+}
