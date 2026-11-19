@@ -4,65 +4,176 @@
     <meta charset="UTF-8">
     <title>Proyecto de Emprendimiento</title>
     <link rel="stylesheet" href="pagina web souk.css">
+
+    <style>
+        /* SECCIÓN CONTACTO */
+
+        .souk-contacto {
+            display: none;
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 40px;
+            background: #f5f5f5;
+            border-radius: 25px;
+            border: 1px solid rgba(8, 36, 120, 0.15);
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .contacto-contenido h2 {
+            color: #01155a;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .contacto-contenido > p {
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .contacto-redes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .red-contacto {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            text-decoration: none;
+            color: #222;
+            border: 1px solid #ddd;
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .red-contacto:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        /* IMÁGENES DE LOS ÍCONOS */
+
+        .icono-red {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            object-fit: contain;
+            display: block;
+            margin: 0;
+        }
+
+        .red-contacto strong {
+            display: block;
+            color: #01155a;
+            font-size: 17px;
+        }
+
+        .red-contacto small {
+            display: block;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .contacto-footer {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid #ccc;
+        }
+
+        .contacto-footer h3 {
+            color: #01155a;
+            font-size: 23px;
+        }
+
+        .contacto-footer p {
+            color: #555;
+            margin: 8px 0;
+        }
+
+        .contacto-footer span {
+            display: block;
+            margin-top: 20px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .souk-contacto {
+                padding: 25px 18px;
+            }
+
+            .contacto-redes {
+                grid-template-columns: 1fr;
+            }
+
+            .contacto-contenido h2 {
+                font-size: 23px;
+            }
+        }
+    </style>
 </head>
+
 <body>
+
 <div class="header">
 
-<div id="menu" class="sidebar">
-    <a href="javascript:void(0)" class="close-btn" onclick="cerrarMenu()">&times;</a>
-    <a onclick="volverInicio()">Inicio</a>
-    <a onclick="mostrarSeccion('quienes')">¿Quiénes somos?</a>
-    <a onclick="mostrarSeccion('hacemos')">¿Qué hacemos y para que ?</a>
-    <a onclick="mostrarSeccion('objetivo')">¿Cuál es nuestro objetivo?</a>
-    <a onclick="mostrarSeccion('necesidad')">¿Que necesidad queremos cubrir?</a>
-    <a onclick="mostrarSeccion('')"></a>
-</div>
+    <div id="menu" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="cerrarMenu()">&times;</a>
+        <a onclick="volverInicio()">Inicio</a>
+        <a onclick="mostrarSeccion('quienes')">¿Quiénes somos?</a>
+        <a onclick="mostrarSeccion('hacemos')">¿Qué hacemos y para que?</a>
+        <a onclick="mostrarSeccion('objetivo')">¿Cuál es nuestro objetivo?</a>
+        <a onclick="mostrarSeccion('necesidad')">¿Que necesidad queremos cubrir?</a>
+        <a onclick="mostrarSeccion('contacto')">Contacto y redes sociales</a>
+    </div>
 
-<header>
-    <button class="menu-btn" onclick="abrirMenu()">☰</button>
+    <header>
+        <button class="menu-btn" onclick="abrirMenu()">☰</button>
+        <img src="logo.jpg" alt="Logo SOUK" class="logo">
+    </header>
 
-    <img src="logo.jpg"
-     alt="Logo SOUK"
-     class="logo">
-</header>
-<div class="presentacion" id="inicio">
+    <div class="presentacion" id="inicio">
 
-    <h2>Bienvenidos a nuestra página web</h2>
+        <h2>Bienvenidos a nuestra página web</h2>
 
-    <section class="banner"></section>
+        <section class="banner"></section>
 
-    <section class="panel">
-        <div class="burbuja">
+        <section class="panel">
+            <div class="burbuja">
 
-            <h1>SOUK GESTIÓN</h1>
+                <h1>SOUK GESTIÓN</h1>
 
+                <h3>
+                    Transformando la gestión escolar
+                    mediante la tecnología
+                </h3>
 
-            <h3>
-                Transformando la gestión escolar
-                mediante la tecnología
-            </h3>
+                <p>
+                    Una plataforma desarrollada por estudiantes
+                    de la E.E.S.T. N.º 3 Víctor Mercante para
+                    digitalizar el registro de asistencias y
+                    optimizar la organización institucional.
+                </p>
 
-            <p>
-                Una plataforma desarrollada por estudiantes
-                de la E.E.S.T. N.º 3 Víctor Mercante para
-                digitalizar el registro de asistencias y
-                optimizar la organización institucional.
-            </p>
+            </div>
+        </section>
 
-        </div>
-    </section>
+    </div>
 
-</div>
-</p>
-</div> <!-- burbuja -->
-</section> <!-- panel -->
-
-<div class="nombres">
-    INTEGRANTES:<br>
-    Keyla Uzal - Xiomara Schegtel - Camila Kolakovich - Santiago Osorio
-</div>
+    <div class="nombres">
+        INTEGRANTES:<br>
+        Keyla Uzal - Xiomara Schegtel - Camila Kolakovich - Santiago Osorio
+    </div>
 
 </div>
+
 <section id="quienes">
 
     <div class="quienes-header">
@@ -72,7 +183,7 @@
     <div class="quienes-principal">
 
         <div class="quienes-imagen">
-           <img src="tecnica3.png" alt="E.E.S.T. N°3 Víctor Mercante">
+            <img src="tecnica3.png" alt="E.E.S.T. N°3 Víctor Mercante">
         </div>
 
         <div class="quienes-texto">
@@ -98,7 +209,6 @@
         </div>
 
     </div>
-
 
     <div class="quienes-objetivos">
 
@@ -134,6 +244,7 @@
     </div>
 
 </section>
+
 <section id="hacemos">
 
     <div class="hacemos-header">
@@ -164,59 +275,48 @@
 
     </div>
 
-
     <div class="hacemos-tarjetas">
 
         <div class="tarjeta-hacemos">
             <div class="icono-hacemos">✓</div>
             <h3>Registro digital</h3>
-            <p>
-                La asistencia se carga de forma rápida y segura.
-            </p>
+            <p>La asistencia se carga de forma rápida y segura.</p>
         </div>
 
         <div class="tarjeta-hacemos">
             <div class="icono-hacemos">⏱</div>
             <h3>Seguimiento</h3>
-            <p>
-                Permite consultar el estado de cada alumno.
-            </p>
+            <p>Permite consultar el estado de cada alumno.</p>
         </div>
 
         <div class="tarjeta-hacemos">
             <div class="icono-hacemos">👥</div>
             <h3>Organización</h3>
-            <p>
-                Toda la información se encuentra ordenada y accesible.
-            </p>
+            <p>Toda la información se encuentra ordenada y accesible.</p>
         </div>
 
         <div class="tarjeta-hacemos">
             <div class="icono-hacemos">✓</div>
             <h3>Menos errores</h3>
-            <p>
-                Reduce errores en la carga y registro de datos.
-            </p>
+            <p>Reduce errores en la carga y registro de datos.</p>
         </div>
 
         <div class="tarjeta-hacemos">
             <div class="icono-hacemos">📊</div>
             <h3>Mejor gestión</h3>
-            <p>
-                Facilita el trabajo del personal educativo y administrativo.
-            </p>
+            <p>Facilita el trabajo del personal educativo y administrativo.</p>
         </div>
 
     </div>
 
 </section>
+
 <section id="objetivo">
 
     <div class="objetivo-header">
         <h2>¿Cuál es nuestro objetivo?</h2>
     </div>
 
-    <!-- OBJETIVO PRINCIPAL -->
     <div class="objetivo-principal">
 
         <img src="objetivo.png" alt="Objetivo de SOUK Gestión">
@@ -230,8 +330,6 @@
 
     </div>
 
-
-    <!-- OBJETIVOS -->
     <div class="objetivos-grid">
 
         <div class="tarjeta-objetivo">
@@ -244,7 +342,6 @@
             </p>
         </div>
 
-
         <div class="tarjeta-objetivo">
             <div class="icono-objetivo">⏱️</div>
             <span>02</span>
@@ -254,7 +351,6 @@
                 tareas administrativas.
             </p>
         </div>
-
 
         <div class="tarjeta-objetivo">
             <div class="icono-objetivo">📊</div>
@@ -266,7 +362,6 @@
             </p>
         </div>
 
-
         <div class="tarjeta-objetivo">
             <div class="icono-objetivo">✓</div>
             <span>04</span>
@@ -276,7 +371,6 @@
                 y conservación de datos.
             </p>
         </div>
-
 
         <div class="tarjeta-objetivo">
             <div class="icono-objetivo">🏫</div>
@@ -290,9 +384,7 @@
 
     </div>
 
-</section>
-
-
+</section> 
 <section id="necesidad">
 
     <div class="necesidad-header">
@@ -333,7 +425,6 @@
 
     </div>
 
-
     <div class="necesidad-frase">
 
         <span>💡</span>
@@ -348,7 +439,6 @@
         </div>
 
     </div>
-
 
     <div class="conclusion">
 
@@ -393,14 +483,121 @@
 
 </section>
 
+<!-- SECCIÓN CONTACTO Y REDES SOCIALES SOUK GESTIÓN -->
+
+<section class="souk-contacto" id="contacto">
+
+    <div class="contacto-contenido">
+
+        <h2>Contactate con nosotros SOUK Gestión</h2>
+
+        <p>
+            Seguinos en nuestras redes sociales y conocé más
+            sobre nuestro proyecto.
+        </p>
+
+        <div class="contacto-redes">
+
+            <!-- INSTAGRAM -->
+            <a href="https://www.instagram.com/sge.asistencia_2026/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="red-contacto instagram">
+
+                <img src="instagram.jpg"
+                     alt="Instagram"
+                     class="icono-red">
+
+                <div>
+                    <strong>Instagram</strong>
+                    <small>@sge.asistencia_2026</small>
+                </div>
+
+            </a>
+
+            <!-- WHATSAPP -->
+            <a href="https://wa.me/5491160228362"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="red-contacto whatsapp">
+
+                <img src="whatsaap.jpg"
+                     alt="WhatsApp"
+                     class="icono-red">
+
+                <div>
+                    <strong>WhatsApp</strong>
+                    <small>11 6022-8362</small>
+                </div>
+
+            </a>
+
+            <!-- YOUTUBE -->
+            <a href="https://youtube.com/@sgeasistencia2026"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="red-contacto youtube">
+
+                <img src="youtube.jpg"
+                     alt="YouTube"
+                     class="icono-red">
+
+                <div>
+                    <strong>YouTube</strong>
+                    <small>@sgeasistencia2026</small>
+                </div>
+
+            </a>
+
+            <!-- UBICACIÓN -->
+            <a href="https://maps.app.goo.gl/4HZR2BLd6eNEpdHV7"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="red-contacto ubicacion">
+
+                <span class="icono-red">📍</span>
+
+                <div>
+                    <strong>Ubicación</strong>
+                    <small>E.E.S.T. N.º 3 Víctor Mercante</small>
+                </div>
+
+            </a>
+
+        </div>
+
+        <!-- PIE DE CONTACTO -->
+        <div class="contacto-footer">
+
+            <h3>SOUK Gestión</h3>
+
+            <p>Sistema de Gestión Escolar</p>
+
+            <p>E.E.S.T. N.º 3 Víctor Mercante</p>
+
+            <span>© 2026 SOUK Gestión. Todos los derechos reservados.</span>
+
+        </div>
+
+    </div>
+
+</section>
+
 <script>
 function abrirMenu() {
-    document.getElementById("menu").style.width = "250px";
+    const menu = document.getElementById("menu");
+
+    if (window.innerWidth <= 768) {
+        menu.style.width = "72vw";
+    } else {
+        menu.style.width = "min(82vw, 650px)";
+    }
 }
 
 function cerrarMenu() {
     document.getElementById("menu").style.width = "0";
 }
+
 
 function mostrarSeccion(id) {
 
@@ -410,6 +607,7 @@ function mostrarSeccion(id) {
     document.getElementById("hacemos").style.display = "none";
     document.getElementById("objetivo").style.display = "none";
     document.getElementById("necesidad").style.display = "none";
+    document.getElementById("contacto").style.display = "none";
 
     const seccion = document.getElementById(id);
 
@@ -426,11 +624,13 @@ function volverInicio() {
     document.getElementById("hacemos").style.display = "none";
     document.getElementById("objetivo").style.display = "none";
     document.getElementById("necesidad").style.display = "none";
+    document.getElementById("contacto").style.display = "none";
 
     document.getElementById("inicio").style.display = "block";
 
     cerrarMenu();
 }
+
 </script>
 
 </body>
